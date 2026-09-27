@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>My Posts - AnonConfess</title>
+          <link rel="stylesheet" href="/css/style.css?v=3">
+</head>
+
+<body>
+
+          <header>
+                    <h1 onclick="window.location.href='/'" style="cursor:pointer;">
+                              AnonConfess
+                    </h1>
+
+                    <nav>
+                              <button onclick="window.location.href='/'">Home</button>
+                              <button onclick="window.location.href='/create-post.html'">Post</button>
+                              <button onclick="window.location.href='/bookmarks.html'">Bookmarks</button>
+                              <button id="logoutButton">Logout</button>
+                    </nav>
+          </header>
+
+          <main>
+
+                    <section class="hero">
+                              <h2>My Posts</h2>
+                              <p>All confessions you have posted.</p>
+                    </section>
+
+                    <section id="myPosts">
+                              <p>Loading your posts...</p>
+                    </section>
+
+          </main>
+
+          <script src="/js/my-posts.js?v=2"></script>
+
+</body>
+
+</html>
