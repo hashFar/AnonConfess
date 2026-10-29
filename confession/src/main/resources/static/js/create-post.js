@@ -24,7 +24,7 @@ document.getElementById("createPostForm").addEventListener("submit", async funct
 
     try {
         const response = await fetch(
-            `/api/posts?email=${encodeURIComponent(userEmail)}`,
+           `https://anonconfess-8nw6.onrender.com/api/posts?email=${encodeURIComponent(userEmail)}`
             {
                 method: "POST",
                 headers: {
