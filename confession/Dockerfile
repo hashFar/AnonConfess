@@ -1,8 +1,13 @@
 FROM eclipse-temurin:21-jdk
+
 WORKDIR /app
-COPY mvnw pom.xml ./
-COPY .mvn .mvn
-RUN chmod +x mvnw && ./mvnw dependency:go-offline
-COPY src ./src
+
+COPY . .
+
+RUN chmod +x mvnw
+
 RUN ./mvnw clean package -DskipTests
-CMD ["sh", "-c", "java -jar target/*.jar"]
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "target/confession-0.0.1-SNAPSHOT.jar"]
