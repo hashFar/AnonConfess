@@ -79,15 +79,15 @@ function Navbar() {
             <nav id="authNav">
                 {userEmail ? (
                     <>
-                        <button onClick={() => window.location.href = "/create-post.html"}>
+                        <button onClick={() => window.location.href = "/create-post"}>
                             Post
                         </button>
 
-                        <button onClick={() => window.location.href = "/my-posts.html"}>
+                        <button onClick={() => window.location.href = "/my-posts"}>
                             My Posts
                         </button>
 
-                        <button onClick={() => window.location.href = "/bookmarks.html"}>
+                        <button onClick={() => window.location.href = "/bookmarks"}>
                             🔖 Bookmarks
                         </button>
 
