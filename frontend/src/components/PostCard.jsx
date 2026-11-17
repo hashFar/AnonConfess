@@ -1,4 +1,3 @@
-
 import PostActions from "./PostActions";
 import PostComments from "./PostComments";
 
@@ -15,16 +14,18 @@ function PostCard({ post, onLike, onDislike, onBookmark, onShare, onReport }) {
                 {new Date(post.createdAt).toLocaleString()}
             </small>
 
-            <PostActions
-                post={post}
-                onLike={onLike}
-                onDislike={onDislike}
-                onBookmark={onBookmark}
-                onShare={onShare}
-                onReport={onReport}
-            />
+            <div className="post-actions">
+                <PostActions
+                    post={post}
+                    onLike={onLike}
+                    onDislike={onDislike}
+                    onBookmark={onBookmark}
+                    onShare={onShare}
+                    onReport={onReport}
+                />
 
-            <PostComments postId={post.id} />
+                <PostComments postId={post.id} />
+            </div>
         </div>
     );
 }

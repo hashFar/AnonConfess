@@ -8,7 +8,7 @@ function PostActions({
     onReport
 }) {
     return (
-        <div className="post-actions">
+        <>
             <button
                 className="vote-button like-button"
                 onClick={() => onLike(post.id)}
@@ -34,7 +34,7 @@ function PostActions({
             <button onClick={() => onReport(post.id)}>
                 🚩 Report
             </button>
-        </div>
+        </>
     );
 }
 

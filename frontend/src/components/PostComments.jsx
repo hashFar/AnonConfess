@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 const API = import.meta.env.VITE_API_BASE_URL;
@@ -94,7 +93,7 @@ function PostComments({ postId }) {
     }
 
     return (
-        <div>
+        <>
             <button onClick={toggleComments}>💬 Comment</button>
 
             {isOpen && (
@@ -110,6 +109,7 @@ function PostComments({ postId }) {
                                 comments.map(comment => (
                                     <div className="comment" key={comment.id}>
                                         <p>{comment.content}</p>
+
                                         <small>
                                             {new Date(comment.createdAt).toLocaleString()}
                                         </small>
@@ -133,7 +133,10 @@ function PostComments({ postId }) {
                                         value={content}
                                         onChange={e => setContent(e.target.value)}
                                     />
-                                    <button onClick={addComment}>Add Comment</button>
+
+                                    <button onClick={addComment}>
+                                        Add Comment
+                                    </button>
                                 </div>
                             ) : (
                                 <p className="login-comment-message">
@@ -144,7 +147,7 @@ function PostComments({ postId }) {
                     )}
                 </div>
             )}
-        </div>
+        </>
     );
 }
 

@@ -823,3 +823,33 @@ main {
    text-align: center;
    color: #777;
 }
+
+.post-actions {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 8px;
+   margin-top: 18px;
+}
+
+.post-actions span {
+   background: #374151;
+   color: #d1d5db;
+   padding: 8px 11px;
+   border-radius: 8px;
+   font-size: 13px;
+}
+
+.post-actions button {
+   background: #374151;
+   color: white;
+}
+
+.post-actions button:hover {
+   background: #4b5563;
+}
+
+/* Comments section takes full width */
+.post-actions .comments-section {
+   flex-basis: 100%;
+}
